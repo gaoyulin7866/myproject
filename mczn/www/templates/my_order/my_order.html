@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>我的订单</title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../font/iconfont.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../font/iconfont.js"></script>
+    <script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="../js/autorem.js"></script>
+</head>
+
+<body>
+<div class="in_top">
+    <a href="javascript:history.back()"><i><svg class="icon icon_fanhui" aria-hidden="true"><use xlink:href="#icon-fanhui"></use></svg></i><span>我的</span></a><div class="in_title">我的订单</div>
+</div>
+<div class="order_details">
+    <div>
+        <p>当前正在使用001号充电站充电：<label>已充满</label></p>
+        <a href="#">断电</a>
+    </div>
+   <div>
+       <p>车库申请未支付订单：1</p>
+       <a href="../carbarn/pay_carbarn.html">去支付</a>
+   </div>
+    <div>
+        <div class="haveApply">
+            <p>车库申请排队等候情况：目前您的前面还有5个人在排队！</p>
+            <a href="javascript:;" class="cancel_queue haveApply">取消排队</a>
+        </div>
+        <div class="noApply">
+            <p>车库申请排队等候情况：您尚未申请车位</p>
+            <a href="../carbarn/near_carbarn.html" class="noApply">去申请</a>
+        </div>
+    </div>
+</div>
+<div class="notice">
+    <p>取消排队后，下次申请将重新排队。确定取消排队？</p>
+    <a href="javascript:;" class="YEScancel">是</a>
+    <a href="javascript:;" class="NOcancel">否</a>
+</div>
+</body>
+</html>

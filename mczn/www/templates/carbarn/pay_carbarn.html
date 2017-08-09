@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>请支付</title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../font/iconfont.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../font/iconfont.js"></script>
+    <script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="../js/autorem.js"></script>
+</head>
+
+<body>
+<div class="in_top">
+    <a href="javascript:history.back()"><i><svg class="icon icon_fanhui" aria-hidden="true"><use xlink:href="#icon-fanhui"></use></svg></i><span>我的</span></a><div class="in_title">请支付</div>
+</div>
+<div class="nearbycarbarn">
+    <p class="pay_money relet_carbarn"><span>请选择续租时间：</span><select>
+        <option>请选择时间</option>
+        <option>三个月</option>
+        <option>半年</option>
+        <option>一年</option>
+    </select></p>
+    <p class="pay_money">支付总金额：<small>250</small>元</p>
+    <p>请选择支付方式：</p>
+    <p>银行卡支付<input type="radio" checked="checked" name="pay_radio"></p>
+    <p>支付宝支付<input type="radio" name="pay_radio"></p>
+    <p>微信支付<input type="radio" name="pay_radio"></p>
+    <a href="pay_success.html" class="confirm_pay">确定支付</a>
+</div>
+</body>
+</html>
