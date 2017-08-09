@@ -1,0 +1,1444 @@
+# depslib dependency file v1.0
+1495777445 source:/media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/business/source/business.cpp
+	"business.h"
+	"teacher.h"
+	<limits.h>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<iostream>
+	<fstream>
+
+1495771250 /media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/business/include/business.h
+
+1495771438 /media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/business/include/teacher.h
+	"person.h"
+
+1495770706 /media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/business/include/person.h
+	<string>
+
+1495771417 source:/media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/business/source/person.cpp
+	"person.h"
+	<iostream>
+
+1495771452 source:/media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/business/source/teacher.cpp
+	"teacher.h"
+	<iostream>
+
+1496212271 source:/media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/main/main.c
+	<stdlib.h>
+	<stdio.h>
+	<limits.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<fcntl.h>
+	<errno.h>
+	<unistd.h>
+	<syslog.h>
+	<string.h>
+	<signal.h>
+	<pthread.h>
+	"utils.h"
+	"zlog.h"
+
+1495769930 /media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/utils/include/utils.h
+	<stdio.h>
+
+1495847756 /media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/include/zlog.h
+	<stdarg.h>
+	<stdio.h>
+
+1495770090 source:/media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/utils/source/utils.c
+	"utils.h"
+	<sys/ioctl.h>
+	<netinet/in.h>
+	<net/if.h>
+	<net/if_arp.h>
+	<arpa/inet.h>
+	<unistd.h>
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<netdb.h>
+	<math.h>
+	<time.h>
+	<ctype.h>
+	<limits.h>
+
+1495847755 source:/media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/buf.c
+	<stdlib.h>
+	<stdio.h>
+	<pthread.h>
+	<errno.h>
+	<stdint.h>
+	"zc_defs.h"
+	"buf.h"
+	<stdio.h>
+
+1495847756 /media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/zc_defs.h
+	"zc_profile.h"
+	"zc_arraylist.h"
+	"zc_hashtable.h"
+	"zc_xplatform.h"
+	"zc_util.h"
+
+1495847756 /media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/zc_profile.h
+	<stdarg.h>
+
+1495847756 /media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/zc_arraylist.h
+
+1495847756 /media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/zc_hashtable.h
+	<stdlib.h>
+
+1495847756 /media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/zc_xplatform.h
+	<limits.h>
+	<string.h>
+	<strings.h>
+	<AvailabilityMacros.h>
+
+1495847756 /media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/zc_util.h
+
+1495847755 /media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/buf.h
+	<stdarg.h>
+	<stdint.h>
+
+1495847755 source:/media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/category.c
+	"fmacros.h"
+	<string.h>
+	<stdlib.h>
+	<errno.h>
+	"category.h"
+	"rule.h"
+	"zc_defs.h"
+
+1495847755 /media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/fmacros.h
+
+1495847755 /media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/category.h
+	"zc_defs.h"
+	"thread.h"
+
+1495847755 /media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/thread.h
+	"zc_defs.h"
+	"event.h"
+	"buf.h"
+	"mdc.h"
+
+1495847755 /media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/event.h
+	<sys/types.h>
+	<sys/time.h>
+	<pthread.h>
+	<stdarg.h>
+	"zc_defs.h"
+
+1495847755 /media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/mdc.h
+	"zc_defs.h"
+
+1495847755 /media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/rule.h
+	<stdio.h>
+	<pthread.h>
+	"zc_defs.h"
+	"format.h"
+	"thread.h"
+	"rotater.h"
+	"record.h"
+
+1495847755 /media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/format.h
+	"thread.h"
+	"zc_defs.h"
+
+1495847755 /media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/rotater.h
+	"zc_defs.h"
+
+1495847755 /media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/record.h
+	"zc_defs.h"
+
+1495847755 source:/media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/category_table.c
+	<string.h>
+	<stdlib.h>
+	<errno.h>
+	"zc_defs.h"
+	"category_table.h"
+
+1495847755 /media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/category_table.h
+	"zc_defs.h"
+	"category.h"
+
+1495847755 source:/media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/conf.c
+	"fmacros.h"
+	<ctype.h>
+	<stdlib.h>
+	<stdio.h>
+	<errno.h>
+	<string.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<unistd.h>
+	<time.h>
+	"conf.h"
+	"rule.h"
+	"format.h"
+	"level_list.h"
+	"rotater.h"
+	"zc_defs.h"
+
+1495847755 /media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/conf.h
+	"zc_defs.h"
+	"format.h"
+	"rotater.h"
+
+1495847755 /media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/level_list.h
+	"zc_defs.h"
+	"level.h"
+
+1495847755 /media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/level.h
+	"zc_defs.h"
+
+1495847755 source:/media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/event.c
+	"fmacros.h"
+	<string.h>
+	<stdarg.h>
+	<stdlib.h>
+	<stdio.h>
+	<errno.h>
+	<pthread.h>
+	<unistd.h>
+	<sys/time.h>
+	"zc_defs.h"
+	"event.h"
+
+1495847755 source:/media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/format.c
+	<stdio.h>
+	<stdlib.h>
+	<stdarg.h>
+	<string.h>
+	<errno.h>
+	<ctype.h>
+	"zc_defs.h"
+	"thread.h"
+	"spec.h"
+	"format.h"
+
+1495847755 /media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/spec.h
+	"event.h"
+	"buf.h"
+	"thread.h"
+
+1495847755 source:/media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/level.c
+	<stdio.h>
+	<ctype.h>
+	<errno.h>
+	"syslog.h"
+	"zc_defs.h"
+	"level.h"
+
+1495847755 source:/media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/level_list.c
+	<stdio.h>
+	<ctype.h>
+	<errno.h>
+	"syslog.h"
+	"zc_defs.h"
+	"level.h"
+	"level_list.h"
+
+1495847755 source:/media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/mdc.c
+	<stdlib.h>
+	<stdio.h>
+	<errno.h>
+	"mdc.h"
+	"zc_defs.h"
+
+1495847755 source:/media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/record.c
+	"errno.h"
+	"zc_defs.h"
+	"record.h"
+
+1495847755 source:/media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/record_table.c
+	<string.h>
+	<stdlib.h>
+	<errno.h>
+	"zc_defs.h"
+	"record_table.h"
+
+1495847755 /media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/record_table.h
+	"zc_defs.h"
+	"record.h"
+
+1495847755 source:/media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/rotater.c
+	<string.h>
+	<glob.h>
+	<stdio.h>
+	<stdlib.h>
+	<errno.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<unistd.h>
+	<fcntl.h>
+	<pthread.h>
+	"zc_defs.h"
+	"rotater.h"
+
+1495847755 source:/media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/rule.c
+	"fmacros.h"
+	<string.h>
+	<ctype.h>
+	<syslog.h>
+	<errno.h>
+	<stdlib.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<fcntl.h>
+	<unistd.h>
+	<pthread.h>
+	"rule.h"
+	"format.h"
+	"buf.h"
+	"thread.h"
+	"level_list.h"
+	"rotater.h"
+	"spec.h"
+	"conf.h"
+	"zc_defs.h"
+
+1495847755 source:/media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/spec.c
+	"fmacros.h"
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<ctype.h>
+	<sys/time.h>
+	<time.h>
+	<errno.h>
+	<sys/types.h>
+	<unistd.h>
+	"conf.h"
+	"spec.h"
+	"level_list.h"
+	"zc_defs.h"
+
+1495847755 source:/media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/thread.c
+	<pthread.h>
+	<errno.h>
+	"zc_defs.h"
+	"event.h"
+	"buf.h"
+	"thread.h"
+	"mdc.h"
+
+1495847756 source:/media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/zc_arraylist.c
+	<stdlib.h>
+	<string.h>
+	<strings.h>
+	<errno.h>
+	"zc_defs.h"
+
+1495847756 source:/media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/zc_hashtable.c
+	<stdlib.h>
+	<errno.h>
+	<pthread.h>
+	"zc_defs.h"
+	"zc_hashtable.h"
+
+1495847756 source:/media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/zc_profile.c
+	"fmacros.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<errno.h>
+	<stdarg.h>
+	<time.h>
+	<sys/types.h>
+	<unistd.h>
+	"zc_profile.h"
+	"zc_xplatform.h"
+
+1495847756 source:/media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/zc_util.c
+	<string.h>
+	<syslog.h>
+	<stdlib.h>
+	<ctype.h>
+	<stdio.h>
+	<errno.h>
+	"zc_defs.h"
+
+1495847756 source:/media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/zlog.c
+	"fmacros.h"
+	<stdio.h>
+	<stdlib.h>
+	<stdarg.h>
+	<string.h>
+	<pthread.h>
+	"conf.h"
+	"category_table.h"
+	"record_table.h"
+	"mdc.h"
+	"zc_defs.h"
+	"rule.h"
+	"version.h"
+
+1495847755 /media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/version.h
+
+1496211911 source:/media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/zlog-chk-conf.c
+	"fmacros.h"
+	<stdio.h>
+	<stdlib.h>
+	<stdarg.h>
+	<string.h>
+	<unistd.h>
+	"zlog.h"
+	"version.h"
+
+1495847756 /media/psf/Home/Documents/gitrepo/liunxprog/exercise/daemon_app2/zlog/source/zlog.h
+	<stdarg.h>
+	<stdio.h>
+
+1495847755 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/buf.c
+	<stdlib.h>
+	<stdio.h>
+	<pthread.h>
+	<errno.h>
+	<stdint.h>
+	"zc_defs.h"
+	"buf.h"
+	<stdio.h>
+
+1495847756 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/zc_defs.h
+	"zc_profile.h"
+	"zc_arraylist.h"
+	"zc_hashtable.h"
+	"zc_xplatform.h"
+	"zc_util.h"
+
+1495847756 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/zc_profile.h
+	<stdarg.h>
+
+1495847756 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/zc_arraylist.h
+
+1495847756 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/zc_hashtable.h
+	<stdlib.h>
+
+1495847756 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/zc_xplatform.h
+	<limits.h>
+	<string.h>
+	<strings.h>
+	<AvailabilityMacros.h>
+
+1495847756 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/zc_util.h
+
+1495847755 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/buf.h
+	<stdarg.h>
+	<stdint.h>
+
+1495847755 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/category.c
+	"fmacros.h"
+	<string.h>
+	<stdlib.h>
+	<errno.h>
+	"category.h"
+	"rule.h"
+	"zc_defs.h"
+
+1495847755 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/fmacros.h
+
+1495847755 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/category.h
+	"zc_defs.h"
+	"thread.h"
+
+1495847755 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/thread.h
+	"zc_defs.h"
+	"event.h"
+	"buf.h"
+	"mdc.h"
+
+1495847755 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/event.h
+	<sys/types.h>
+	<sys/time.h>
+	<pthread.h>
+	<stdarg.h>
+	"zc_defs.h"
+
+1495847755 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/mdc.h
+	"zc_defs.h"
+
+1495847755 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/rule.h
+	<stdio.h>
+	<pthread.h>
+	"zc_defs.h"
+	"format.h"
+	"thread.h"
+	"rotater.h"
+	"record.h"
+
+1495847755 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/format.h
+	"thread.h"
+	"zc_defs.h"
+
+1495847755 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/rotater.h
+	"zc_defs.h"
+
+1495847755 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/record.h
+	"zc_defs.h"
+
+1495847755 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/category_table.c
+	<string.h>
+	<stdlib.h>
+	<errno.h>
+	"zc_defs.h"
+	"category_table.h"
+
+1495847755 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/category_table.h
+	"zc_defs.h"
+	"category.h"
+
+1495847755 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/conf.c
+	"fmacros.h"
+	<ctype.h>
+	<stdlib.h>
+	<stdio.h>
+	<errno.h>
+	<string.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<unistd.h>
+	<time.h>
+	"conf.h"
+	"rule.h"
+	"format.h"
+	"level_list.h"
+	"rotater.h"
+	"zc_defs.h"
+
+1495847755 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/conf.h
+	"zc_defs.h"
+	"format.h"
+	"rotater.h"
+
+1495847755 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/level_list.h
+	"zc_defs.h"
+	"level.h"
+
+1495847755 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/level.h
+	"zc_defs.h"
+
+1495847755 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/event.c
+	"fmacros.h"
+	<string.h>
+	<stdarg.h>
+	<stdlib.h>
+	<stdio.h>
+	<errno.h>
+	<pthread.h>
+	<unistd.h>
+	<sys/time.h>
+	"zc_defs.h"
+	"event.h"
+
+1495847755 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/format.c
+	<stdio.h>
+	<stdlib.h>
+	<stdarg.h>
+	<string.h>
+	<errno.h>
+	<ctype.h>
+	"zc_defs.h"
+	"thread.h"
+	"spec.h"
+	"format.h"
+
+1495847755 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/spec.h
+	"event.h"
+	"buf.h"
+	"thread.h"
+
+1495847755 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/level.c
+	<stdio.h>
+	<ctype.h>
+	<errno.h>
+	"syslog.h"
+	"zc_defs.h"
+	"level.h"
+
+1495847755 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/level_list.c
+	<stdio.h>
+	<ctype.h>
+	<errno.h>
+	"syslog.h"
+	"zc_defs.h"
+	"level.h"
+	"level_list.h"
+
+1495847755 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/mdc.c
+	<stdlib.h>
+	<stdio.h>
+	<errno.h>
+	"mdc.h"
+	"zc_defs.h"
+
+1495847755 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/record.c
+	"errno.h"
+	"zc_defs.h"
+	"record.h"
+
+1495847755 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/record_table.c
+	<string.h>
+	<stdlib.h>
+	<errno.h>
+	"zc_defs.h"
+	"record_table.h"
+
+1495847755 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/record_table.h
+	"zc_defs.h"
+	"record.h"
+
+1495847755 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/rotater.c
+	<string.h>
+	<glob.h>
+	<stdio.h>
+	<stdlib.h>
+	<errno.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<unistd.h>
+	<fcntl.h>
+	<pthread.h>
+	"zc_defs.h"
+	"rotater.h"
+
+1495847755 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/rule.c
+	"fmacros.h"
+	<string.h>
+	<ctype.h>
+	<syslog.h>
+	<errno.h>
+	<stdlib.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<fcntl.h>
+	<unistd.h>
+	<pthread.h>
+	"rule.h"
+	"format.h"
+	"buf.h"
+	"thread.h"
+	"level_list.h"
+	"rotater.h"
+	"spec.h"
+	"conf.h"
+	"zc_defs.h"
+
+1495847755 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/spec.c
+	"fmacros.h"
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<ctype.h>
+	<sys/time.h>
+	<time.h>
+	<errno.h>
+	<sys/types.h>
+	<unistd.h>
+	"conf.h"
+	"spec.h"
+	"level_list.h"
+	"zc_defs.h"
+
+1495847755 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/thread.c
+	<pthread.h>
+	<errno.h>
+	"zc_defs.h"
+	"event.h"
+	"buf.h"
+	"thread.h"
+	"mdc.h"
+
+1495847756 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/zc_arraylist.c
+	<stdlib.h>
+	<string.h>
+	<strings.h>
+	<errno.h>
+	"zc_defs.h"
+
+1495847756 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/zc_hashtable.c
+	<stdlib.h>
+	<errno.h>
+	<pthread.h>
+	"zc_defs.h"
+	"zc_hashtable.h"
+
+1495847756 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/zc_profile.c
+	"fmacros.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<errno.h>
+	<stdarg.h>
+	<time.h>
+	<sys/types.h>
+	<unistd.h>
+	"zc_profile.h"
+	"zc_xplatform.h"
+
+1495847756 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/zc_util.c
+	<string.h>
+	<syslog.h>
+	<stdlib.h>
+	<ctype.h>
+	<stdio.h>
+	<errno.h>
+	"zc_defs.h"
+
+1496212511 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/zlog-chk-conf.c
+	"fmacros.h"
+	<stdio.h>
+	<stdlib.h>
+	<stdarg.h>
+	<string.h>
+	<unistd.h>
+	"zlog.h"
+	"version.h"
+
+1495847756 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/zlog.h
+	<stdarg.h>
+	<stdio.h>
+
+1495847755 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/version.h
+
+1495847756 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/source/zlog.c
+	"fmacros.h"
+	<stdio.h>
+	<stdlib.h>
+	<stdarg.h>
+	<string.h>
+	<pthread.h>
+	"conf.h"
+	"category_table.h"
+	"record_table.h"
+	"mdc.h"
+	"zc_defs.h"
+	"rule.h"
+	"version.h"
+
+1496718170 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/domain/source/app.c
+	<stdlib.h>
+	<stdio.h>
+	<errno.h>
+	<unistd.h>
+	<string.h>
+	<signal.h>
+	<pthread.h>
+	<sys/types.h>
+	<semaphore.h>
+	"utils.h"
+	"logger.h"
+	"common.h"
+	"msgobject.h"
+	"mqttclientwrapper.h"
+	"msgsendschedule.h"
+	"msgrevhandler.h"
+	"reportdata.h"
+
+1496305870 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/domain/include/utils.h
+	<stdio.h>
+
+1496632218 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/domain/include/logger.h
+	"zlog.h"
+
+1495847756 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/zlog/include/zlog.h
+	<stdarg.h>
+	<stdio.h>
+
+1496657607 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/domain/include/common.h
+
+1496394823 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/domain/include/msgs.h
+	"msgdef.h"
+
+1496656705 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/domain/include/msgdef.h
+
+1496644972 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/domain/include/mqttclientwrapper.h
+	"common.h"
+
+1496383271 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/domain/source/logger.c
+	"logger.h"
+	<limits.h>
+	<string.h>
+	<unistd.h>
+	"utils.h"
+	"zlog.h"
+	"common.h"
+
+1496712706 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/domain/source/mqttclientwrapper.c
+	"mqttclientwrapper.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+	"logger.h"
+	"MQTTAsync.h"
+
+1496382143 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/include/MQTTAsync.h
+	<stdio.h>
+	"MQTTClientPersistence.h"
+	"stdio.h"
+	"stdlib.h"
+	"string.h"
+	"MQTTAsync.h"
+	"stdio.h"
+	"stdlib.h"
+	"string.h"
+	"MQTTAsync.h"
+
+1496382143 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/include/MQTTClientPersistence.h
+
+1496408381 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/domain/source/msgs.c
+	"msgs.h"
+	<stdio.h>
+	<stdlib.h>
+	<memory.h>
+	<assert.h>
+	<string.h>
+	"common.h"
+	"Logger.h"
+	"msgdef.h"
+	"json.h"
+
+1496386192 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/json-c/include/json.h
+	"debug.h"
+	"linkhash.h"
+	"arraylist.h"
+	"json_util.h"
+	"json_object.h"
+	"json_pointer.h"
+	"json_tokener.h"
+	"json_object_iterator.h"
+	"json_c_version.h"
+
+1496386192 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/json-c/include/debug.h
+	<stdlib.h>
+
+1496386192 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/json-c/include/linkhash.h
+	"json_object.h"
+
+1496714926 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/json-c/include/json_object.h
+	<stddef.h>
+	"json_inttypes.h"
+
+1496386192 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/json-c/include/json_inttypes.h
+	"json_config.h"
+	<inttypes.h>
+	<stdint.h>
+
+1496386192 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/json-c/include/json_config.h
+
+1496386192 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/json-c/include/arraylist.h
+
+1496386192 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/json-c/include/json_util.h
+	"json_object.h"
+
+1496386192 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/json-c/include/json_pointer.h
+	"json_object.h"
+
+1496386192 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/json-c/include/json_tokener.h
+	<stddef.h>
+	"json_object.h"
+
+1496386192 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/json-c/include/json_object_iterator.h
+	<stddef.h>
+
+1496386192 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/json-c/include/json_c_version.h
+
+1496382143 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/domain/source/utils.c
+	"utils.h"
+	<unistd.h>
+	<string.h>
+	<stdlib.h>
+	<limits.h>
+	<fcntl.h>
+
+1496386211 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/json-c/source/arraylist.c
+	"config.h"
+	<limits.h>
+	<stdlib.h>
+	<string.h>
+	<strings.h>
+	"arraylist.h"
+
+1496386192 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/json-c/include/config.h
+
+1496386211 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/json-c/source/debug.c
+	"config.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdarg.h>
+	<syslog.h>
+	<unistd.h>
+	<sys/param.h>
+	"debug.h"
+
+1496386211 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/json-c/source/json_c_version.c
+	"config.h"
+	"json_c_version.h"
+
+1496386211 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/json-c/source/json_object.c
+	"config.h"
+	<assert.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<string.h>
+	<math.h>
+	<errno.h>
+	"debug.h"
+	"printbuf.h"
+	"linkhash.h"
+	"arraylist.h"
+	"json_inttypes.h"
+	"json_object.h"
+	"json_object_private.h"
+	"json_util.h"
+	"math_compat.h"
+	"strdup_compat.h"
+
+1496386192 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/json-c/include/printbuf.h
+
+1496386192 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/json-c/include/json_object_private.h
+
+1496386192 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/json-c/include/math_compat.h
+	<float.h>
+	<float.h>
+	<float.h>
+
+1496386192 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/json-c/include/strdup_compat.h
+
+1496386211 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/json-c/source/json_object_iterator.c
+	<stddef.h>
+	"json.h"
+	"json_object_private.h"
+	"json_object_iterator.h"
+
+1496386211 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/json-c/source/json_pointer.c
+	"config.h"
+	<stdarg.h>
+	<stdio.h>
+	<stdlib.h>
+	<errno.h>
+	<string.h>
+	<ctype.h>
+	"json_pointer.h"
+	"strdup_compat.h"
+	"vasprintf_compat.h"
+
+1496386192 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/json-c/include/vasprintf_compat.h
+
+1496386211 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/json-c/source/json_tokener.c
+	"config.h"
+	<math.h>
+	"math_compat.h"
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<ctype.h>
+	<string.h>
+	<limits.h>
+	"debug.h"
+	"printbuf.h"
+	"arraylist.h"
+	"json_inttypes.h"
+	"json_object.h"
+	"json_tokener.h"
+	"json_util.h"
+	"strdup_compat.h"
+	<locale.h>
+	<xlocale.h>
+
+1496386211 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/json-c/source/json_util.c
+	"config.h"
+	<stdarg.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<limits.h>
+	<string.h>
+	<errno.h>
+	<ctype.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<fcntl.h>
+	<unistd.h>
+	<windows.h>
+	<io.h>
+	"debug.h"
+	"printbuf.h"
+	"json_inttypes.h"
+	"json_object.h"
+	"json_tokener.h"
+	"json_util.h"
+
+1496386211 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/json-c/source/json_visit.c
+	<stdio.h>
+	"config.h"
+	"json_inttypes.h"
+	"json_object.h"
+	"json_visit.h"
+	"linkhash.h"
+
+1496386192 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/json-c/include/json_visit.h
+	"json_object.h"
+
+1496386211 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/json-c/source/libjson.c
+	<sys/cdefs.h>
+	"json_object.h"
+
+1496386211 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/json-c/source/linkhash.c
+	"config.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<stdarg.h>
+	<stddef.h>
+	<limits.h>
+	<endian.h>
+	<windows.h>
+	"random_seed.h"
+	"linkhash.h"
+
+1496386192 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/json-c/include/random_seed.h
+
+1496386211 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/json-c/source/printbuf.c
+	"config.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdarg.h>
+	"debug.h"
+	"printbuf.h"
+	"vasprintf_compat.h"
+
+1496386211 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/json-c/source/random_seed.c
+	<stdio.h>
+	"config.h"
+	"random_seed.h"
+	<string.h>
+	<fcntl.h>
+	<unistd.h>
+	<errno.h>
+	<stdlib.h>
+	<sys/stat.h>
+	<windows.h>
+	<wincrypt.h>
+	<time.h>
+
+1496627848 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/main/main.c
+	<stdlib.h>
+	<stdio.h>
+	"app.h"
+
+1496628600 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/domain/include/app.h
+
+1496382143 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/source/Clients.c
+	"Clients.h"
+	<string.h>
+	<stdio.h>
+
+1496382143 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/include/Clients.h
+	<time.h>
+	"winsock2.h"
+	<openssl/ssl.h>
+	"MQTTClient.h"
+	"LinkedList.h"
+	"MQTTClientPersistence.h"
+
+1496382143 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/include/MQTTClient.h
+	<stdio.h>
+	"MQTTClientPersistence.h"
+	"stdio.h"
+	"stdlib.h"
+	"string.h"
+	"MQTTClient.h"
+	"stdio.h"
+	"stdlib.h"
+	"string.h"
+	"MQTTClient.h"
+	"stdio.h"
+	"stdlib.h"
+	"string.h"
+	"MQTTClient.h"
+
+1496382143 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/include/LinkedList.h
+	<stdlib.h>
+
+1496382143 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/source/Heap.c
+	"Tree.h"
+	"Log.h"
+	"StackTrace.h"
+	"Thread.h"
+	<memory.h>
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	<stddef.h>
+	"Heap.h"
+
+1496382143 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/include/Tree.h
+	<stdlib.h>
+
+1496382143 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/include/Log.h
+
+1496382143 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/include/StackTrace.h
+	<stdio.h>
+	"Log.h"
+	"Thread.h"
+
+1496382143 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/include/Thread.h
+	"MQTTClient.h"
+	<windows.h>
+	<pthread.h>
+	<dispatch/dispatch.h>
+	<semaphore.h>
+
+1496382143 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/include/Heap.h
+	<stdio.h>
+	<memory.h>
+	<stdlib.h>
+
+1496382143 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/source/LinkedList.c
+	"LinkedList.h"
+	<stdlib.h>
+	<string.h>
+	<memory.h>
+	"Heap.h"
+
+1496382143 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/source/Log.c
+	"Log.h"
+	"MQTTPacket.h"
+	"MQTTProtocol.h"
+	"MQTTProtocolClient.h"
+	"Messages.h"
+	"LinkedList.h"
+	"StackTrace.h"
+	"Thread.h"
+	<stdio.h>
+	<stdlib.h>
+	<stdarg.h>
+	<time.h>
+	<string.h>
+	<syslog.h>
+	<sys/stat.h>
+	<sys/time.h>
+	<sys/timeb.h>
+
+1496382143 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/include/MQTTPacket.h
+	"Socket.h"
+	"SSLSocket.h"
+	"LinkedList.h"
+	"Clients.h"
+	"MQTTPacketOut.h"
+
+1496382143 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/include/Socket.h
+	<sys/types.h>
+	<winsock2.h>
+	<ws2tcpip.h>
+	<sys/socket.h>
+	<sys/param.h>
+	<sys/time.h>
+	<sys/select.h>
+	<netinet/in.h>
+	<netinet/tcp.h>
+	<arpa/inet.h>
+	<netdb.h>
+	<stdio.h>
+	<unistd.h>
+	<errno.h>
+	<fcntl.h>
+	<unistd.h>
+	<sys/uio.h>
+	"LinkedList.h"
+
+1496382143 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/include/SSLSocket.h
+	<pthread.h>
+	<semaphore.h>
+	<openssl/ssl.h>
+	"SocketBuffer.h"
+	"Clients.h"
+
+1496382143 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/include/SocketBuffer.h
+	<winsock2.h>
+	<sys/socket.h>
+	<openssl/ssl.h>
+
+1496382143 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/include/MQTTPacketOut.h
+	"MQTTPacket.h"
+
+1496382143 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/include/MQTTProtocol.h
+	"LinkedList.h"
+	"MQTTPacket.h"
+	"Clients.h"
+	"MQTTProtocolOut.h"
+
+1496382143 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/include/MQTTProtocolOut.h
+	"LinkedList.h"
+	"MQTTPacket.h"
+	"Clients.h"
+	"Log.h"
+	"Messages.h"
+	"MQTTProtocol.h"
+	"MQTTProtocolClient.h"
+
+1496382143 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/include/Messages.h
+	"Log.h"
+
+1496382143 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/include/MQTTProtocolClient.h
+	"LinkedList.h"
+	"MQTTPacket.h"
+	"Log.h"
+	"MQTTProtocol.h"
+	"Messages.h"
+
+1496382143 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/source/Messages.c
+	"Messages.h"
+	"Log.h"
+	<stdio.h>
+	<stdlib.h>
+	<memory.h>
+	<string.h>
+	"Heap.h"
+
+1496382143 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/source/MQTTAsync.c
+	<stdlib.h>
+	<sys/time.h>
+	"MQTTPersistence.h"
+	"MQTTAsync.h"
+	"utf-8.h"
+	"MQTTProtocol.h"
+	"MQTTProtocolOut.h"
+	"Thread.h"
+	"SocketBuffer.h"
+	"StackTrace.h"
+	"Heap.h"
+	"VersionInfo.h"
+
+1496382143 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/include/MQTTPersistence.h
+	"Clients.h"
+
+1496382143 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/include/utf-8.h
+
+1496382143 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/include/VersionInfo.h
+
+1496382143 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/source/MQTTPacket.c
+	"MQTTPacket.h"
+	"Log.h"
+	"MQTTPersistence.h"
+	"Messages.h"
+	"StackTrace.h"
+	<stdlib.h>
+	<string.h>
+	"Heap.h"
+
+1496382143 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/source/MQTTPacketOut.c
+	"MQTTPacketOut.h"
+	"Log.h"
+	"StackTrace.h"
+	<string.h>
+	<stdlib.h>
+	"Heap.h"
+
+1496382143 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/source/MQTTPersistence.c
+	<stdio.h>
+	<string.h>
+	"MQTTPersistence.h"
+	"MQTTPersistenceDefault.h"
+	"MQTTProtocolClient.h"
+	"Heap.h"
+	"StackTrace.h"
+
+1496382143 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/include/MQTTPersistenceDefault.h
+
+1496382143 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/source/MQTTPersistenceDefault.c
+	<stdio.h>
+	<string.h>
+	<errno.h>
+	<direct.h>
+	<sys/stat.h>
+	<dirent.h>
+	<unistd.h>
+	"MQTTClientPersistence.h"
+	"MQTTPersistenceDefault.h"
+	"StackTrace.h"
+	"Heap.h"
+
+1496382143 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/source/MQTTProtocolClient.c
+	<stdlib.h>
+	"MQTTProtocolClient.h"
+	"MQTTPersistence.h"
+	"SocketBuffer.h"
+	"StackTrace.h"
+	"Heap.h"
+
+1496382143 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/source/MQTTProtocolOut.c
+	<stdlib.h>
+	"MQTTProtocolOut.h"
+	"StackTrace.h"
+	"Heap.h"
+
+1496382143 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/source/Socket.c
+	"Socket.h"
+	"Log.h"
+	"SocketBuffer.h"
+	"Messages.h"
+	"StackTrace.h"
+	"SSLSocket.h"
+	<stdlib.h>
+	<string.h>
+	<signal.h>
+	<ctype.h>
+	"Heap.h"
+
+1496382143 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/source/SocketBuffer.c
+	"SocketBuffer.h"
+	"LinkedList.h"
+	"Log.h"
+	"Messages.h"
+	"StackTrace.h"
+	<stdlib.h>
+	<stdio.h>
+	<memory.h>
+	"Heap.h"
+
+1496382143 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/source/SSLSocket.c
+	"SocketBuffer.h"
+	"MQTTClient.h"
+	"SSLSocket.h"
+	"Log.h"
+	"StackTrace.h"
+	"Socket.h"
+	"Heap.h"
+	<openssl/ssl.h>
+	<openssl/err.h>
+	<openssl/crypto.h>
+
+1496382143 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/source/StackTrace.c
+	"StackTrace.h"
+	"Log.h"
+	"LinkedList.h"
+	"Clients.h"
+	"Thread.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	"StackTrace.h"
+
+1496382143 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/source/Thread.c
+	"Thread.h"
+	"StackTrace.h"
+	<errno.h>
+	<unistd.h>
+	<sys/time.h>
+	<fcntl.h>
+	<stdio.h>
+	<sys/stat.h>
+	<limits.h>
+	<memory.h>
+	<stdlib.h>
+	<stdio.h>
+
+1496382143 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/source/Tree.c
+	"Tree.h"
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<memory.h>
+	"Heap.h"
+
+1496382143 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/mqtt-c/source/utf-8.c
+	"utf-8.h"
+	<stdlib.h>
+	<string.h>
+	"StackTrace.h"
+	<stdio.h>
+
+1496628740 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/utils/include/utils.h
+	<stdio.h>
+
+1496714321 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/domain/include/msgobject.h
+	"msgdef.h"
+
+1496645366 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/domain/include/msgsendschedule.h
+
+1496713198 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/domain/include/msgrevhandler.h
+	"common.h"
+
+1496716724 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/domain/include/reportdata.h
+
+1496715003 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/domain/source/msgobject.c
+	"msgobject.h"
+	<stdio.h>
+	<stdlib.h>
+	<memory.h>
+	<assert.h>
+	<string.h>
+	"common.h"
+	"Logger.h"
+	"msgdef.h"
+	"json.h"
+
+1496713170 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/domain/source/msgrevhandler.c
+	"msgrevhandler.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<memory.h>
+	"utils.h"
+	<unistd.h>
+	"logger.h"
+
+1496716357 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/domain/source/msgsendschedule.c
+	"msgsendschedule.h"
+	<stdlib.h>
+	<stdio.h>
+	<errno.h>
+	<unistd.h>
+	<string.h>
+	<limits.h>
+	<memory.h>
+	"logger.h"
+	"common.h"
+	"msgdef.h"
+	"mqttclientwrapper.h"
+	"msgobject.h"
+	"reportdata.h"
+
+1496716875 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/domain/source/reportdata.c
+	"reportdata.h"
+	<unistd.h>
+	<string.h>
+	<stdlib.h>
+	<limits.h>
+	<memory.h>
+	"common.h"
+	"logger.h"
+	"utils.h"
+
+1435044508 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/utils/source/ini_parser.c
+	"slist.h"
+	"ini_parser.h"
+	<stdio.h>
+	<string.h>
+	<errno.h>
+	<stdlib.h>
+
+1416972714 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/utils/include/slist.h
+
+1416980698 /media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/utils/include/ini_parser.h
+
+1435044458 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/utils/source/slist.c
+	"slist.h"
+	<malloc.h>
+
+1496717387 source:/media/psf/Home/Documents/hmgitrepo/dma_light/dma_light/utils/source/utils.c
+	"utils.h"
+	<unistd.h>
+	<string.h>
+	<stdlib.h>
+	<limits.h>
+	<fcntl.h>
+

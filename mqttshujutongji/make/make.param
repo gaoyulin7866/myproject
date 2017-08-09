@@ -1,0 +1,15 @@
+# 2008.3.8 c42025
+# define all global environment for all samples
+#define cross compiler
+
+# used to compile release sample
+
+export CROSS:=
+#export CROSS:=arm-hisiv200-linux-gnueabi-
+
+export CC:=$(CROSS)gcc
+export AR:=$(CROSS)ar
+export OBJCOPY:=$(CROSS)objcopy
+
+#CFLAGS := -DSTBNMS -g -Wall $(shell mysql_config --cflags)
+CFLAGS := -DSTB -D_GNU_SOURCE -D__USE_XOPEN -g -Wall -static

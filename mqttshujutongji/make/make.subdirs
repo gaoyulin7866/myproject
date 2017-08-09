@@ -1,0 +1,17 @@
+#
+# @date 2012-6-12
+#
+# @author zhang jian ming
+#
+
+.PHONY: ${subdirs}
+
+
+${subdirs}::
+	@echo Subdirectory build for ${subdirs}
+	@(for dir in $(subdirs); do $(MAKE) -C $$dir || exit 1; done)
+
+clean::
+	@echo Subdirectory clean for ${subdirs}
+	@(for dir in $(subdirs); do $(MAKE) -C $$dir clean; done)
+	

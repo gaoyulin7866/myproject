@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="dma" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="debug">
+				<Option output="bin/debug/daemon_app" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters="--test" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-DCB_PROJECT" />
+					<Add directory="../json-c/include" />
+					<Add directory="../zlog/include" />
+					<Add directory="../app/include" />
+					<Add directory="../mqtt-c/include" />
+					<Add directory="../utils/include" />
+				</Compiler>
+				<Linker>
+					<Add library="pthread" />
+				</Linker>
+				<ExtraCommands>
+					<Add after="cp ../zlog/conf/zlog.conf bin/debug" />
+				</ExtraCommands>
+			</Target>
+			<Target title="release">
+				<Option output="bin/release/daemon_app" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+				<ExtraCommands>
+					<Add after="cp ../zlog/conf/zlog.conf bin/release" />
+				</ExtraCommands>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="../app/include/app.h" />
+		<Unit filename="../app/include/common.h" />
+		<Unit filename="../app/include/logger.h" />
+		<Unit filename="../app/include/mqttclientwrapper.h" />
+		<Unit filename="../app/include/msgdef.h" />
+		<Unit filename="../app/include/msgobject.h" />
+		<Unit filename="../app/include/msgrevhandler.h" />
+		<Unit filename="../app/include/msgsendschedule.h" />
+		<Unit filename="../app/include/reportdata.h" />
+		<Unit filename="../app/source/app.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../app/source/logger.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../app/source/mqttclientwrapper.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../app/source/msgobject.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../app/source/msgrevhandler.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../app/source/msgsendschedule.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../app/source/reportdata.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../json-c/include/arraylist.h" />
+		<Unit filename="../json-c/include/bits.h" />
+		<Unit filename="../json-c/include/config.h" />
+		<Unit filename="../json-c/include/debug.h" />
+		<Unit filename="../json-c/include/json.h" />
+		<Unit filename="../json-c/include/json_c_version.h" />
+		<Unit filename="../json-c/include/json_config.h" />
+		<Unit filename="../json-c/include/json_inttypes.h" />
+		<Unit filename="../json-c/include/json_object.h" />
+		<Unit filename="../json-c/include/json_object_iterator.h" />
+		<Unit filename="../json-c/include/json_object_private.h" />
+		<Unit filename="../json-c/include/json_pointer.h" />
+		<Unit filename="../json-c/include/json_tokener.h" />
+		<Unit filename="../json-c/include/json_util.h" />
+		<Unit filename="../json-c/include/json_visit.h" />
+		<Unit filename="../json-c/include/linkhash.h" />
+		<Unit filename="../json-c/include/math_compat.h" />
+		<Unit filename="../json-c/include/printbuf.h" />
+		<Unit filename="../json-c/include/random_seed.h" />
+		<Unit filename="../json-c/include/strdup_compat.h" />
+		<Unit filename="../json-c/include/vasprintf_compat.h" />
+		<Unit filename="../json-c/source/arraylist.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../json-c/source/debug.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../json-c/source/json_c_version.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../json-c/source/json_object.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../json-c/source/json_object_iterator.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../json-c/source/json_pointer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../json-c/source/json_tokener.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../json-c/source/json_util.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../json-c/source/json_visit.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../json-c/source/libjson.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../json-c/source/linkhash.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../json-c/source/printbuf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../json-c/source/random_seed.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../main/main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../mqtt-c/include/Clients.h" />
+		<Unit filename="../mqtt-c/include/Heap.h" />
+		<Unit filename="../mqtt-c/include/LinkedList.h" />
+		<Unit filename="../mqtt-c/include/Log.h" />
+		<Unit filename="../mqtt-c/include/MQTTAsync.h" />
+		<Unit filename="../mqtt-c/include/MQTTClient.h" />
+		<Unit filename="../mqtt-c/include/MQTTClientPersistence.h" />
+		<Unit filename="../mqtt-c/include/MQTTPacket.h" />
+		<Unit filename="../mqtt-c/include/MQTTPacketOut.h" />
+		<Unit filename="../mqtt-c/include/MQTTPersistence.h" />
+		<Unit filename="../mqtt-c/include/MQTTPersistenceDefault.h" />
+		<Unit filename="../mqtt-c/include/MQTTProtocol.h" />
+		<Unit filename="../mqtt-c/include/MQTTProtocolClient.h" />
+		<Unit filename="../mqtt-c/include/MQTTProtocolOut.h" />
+		<Unit filename="../mqtt-c/include/Messages.h" />
+		<Unit filename="../mqtt-c/include/SSLSocket.h" />
+		<Unit filename="../mqtt-c/include/Socket.h" />
+		<Unit filename="../mqtt-c/include/SocketBuffer.h" />
+		<Unit filename="../mqtt-c/include/StackTrace.h" />
+		<Unit filename="../mqtt-c/include/Thread.h" />
+		<Unit filename="../mqtt-c/include/Tree.h" />
+		<Unit filename="../mqtt-c/include/VersionInfo.h" />
+		<Unit filename="../mqtt-c/include/utf-8.h" />
+		<Unit filename="../mqtt-c/source/Clients.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../mqtt-c/source/Heap.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../mqtt-c/source/LinkedList.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../mqtt-c/source/Log.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../mqtt-c/source/MQTTAsync.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../mqtt-c/source/MQTTPacket.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../mqtt-c/source/MQTTPacketOut.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../mqtt-c/source/MQTTPersistence.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../mqtt-c/source/MQTTPersistenceDefault.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../mqtt-c/source/MQTTProtocolClient.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../mqtt-c/source/MQTTProtocolOut.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../mqtt-c/source/Messages.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../mqtt-c/source/SSLSocket.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../mqtt-c/source/Socket.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../mqtt-c/source/SocketBuffer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../mqtt-c/source/StackTrace.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../mqtt-c/source/Thread.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../mqtt-c/source/Tree.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../mqtt-c/source/utf-8.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../utils/include/ini_parser.h" />
+		<Unit filename="../utils/include/slist.h" />
+		<Unit filename="../utils/include/utils.h" />
+		<Unit filename="../utils/source/ini_parser.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../utils/source/slist.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../utils/source/utils.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../zlog/include/zlog.h" />
+		<Unit filename="../zlog/source/buf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../zlog/source/buf.h" />
+		<Unit filename="../zlog/source/category.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../zlog/source/category.h" />
+		<Unit filename="../zlog/source/category_table.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../zlog/source/category_table.h" />
+		<Unit filename="../zlog/source/conf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../zlog/source/conf.h" />
+		<Unit filename="../zlog/source/event.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../zlog/source/event.h" />
+		<Unit filename="../zlog/source/fmacros.h" />
+		<Unit filename="../zlog/source/format.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../zlog/source/format.h" />
+		<Unit filename="../zlog/source/level.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../zlog/source/level.h" />
+		<Unit filename="../zlog/source/level_list.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../zlog/source/level_list.h" />
+		<Unit filename="../zlog/source/mdc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../zlog/source/mdc.h" />
+		<Unit filename="../zlog/source/record.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../zlog/source/record.h" />
+		<Unit filename="../zlog/source/record_table.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../zlog/source/record_table.h" />
+		<Unit filename="../zlog/source/rotater.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../zlog/source/rotater.h" />
+		<Unit filename="../zlog/source/rule.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../zlog/source/rule.h" />
+		<Unit filename="../zlog/source/spec.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../zlog/source/spec.h" />
+		<Unit filename="../zlog/source/thread.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../zlog/source/thread.h" />
+		<Unit filename="../zlog/source/version.h" />
+		<Unit filename="../zlog/source/zc_arraylist.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../zlog/source/zc_arraylist.h" />
+		<Unit filename="../zlog/source/zc_defs.h" />
+		<Unit filename="../zlog/source/zc_hashtable.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../zlog/source/zc_hashtable.h" />
+		<Unit filename="../zlog/source/zc_profile.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../zlog/source/zc_profile.h" />
+		<Unit filename="../zlog/source/zc_util.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../zlog/source/zc_util.h" />
+		<Unit filename="../zlog/source/zc_xplatform.h" />
+		<Unit filename="../zlog/source/zlog-chk-conf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../zlog/source/zlog.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../zlog/source/zlog.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

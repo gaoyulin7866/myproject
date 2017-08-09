@@ -1,0 +1,14 @@
+*.log
+node_modules
+.npminstall.done
+.svn
+.DS_Store
+*.diff
+*.zip
+assets
+www
+README.html
+upload
+.idea
+~$h5-schedule.xlsx
+~$terface.doc
