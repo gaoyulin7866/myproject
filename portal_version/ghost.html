@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-table.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/vue.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-table.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-table-zh-CN.js"></script>
+    <script src="js/Blob.js"></script>
+    <script src="js/FileSaver.min.js"></script>
+    <script src="js/ExportUtil.js"></script>
+    <style>
+        body {
+            padding: 0 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="table">
+        <table>
+        <thead>
+            <tr>
+                <th>Device</th>
+                <th class="col-lg-6"><b class="col-lg-10">Time</b><button id="btn" type="button" class="btn btn-info col-lg-2 gohst_btn"><small>导出数据</small></button></th> 
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for=" list in ghostName " onload="load()">
+                <td style="text-align: center; "><a v-bind:href="'http://soma.ihangmei.com/soma/web/faults/#/device/' + list.name" class="col-md-12" target="_blank">{{ list.name }}</a></td>
+                <td class="col-md-6" style="text-align: center; ">{{ list.time }}</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    <script src="js/ghost.js"></script>
+</body>
+
+</html>

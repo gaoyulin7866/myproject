@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/semantic.min.css">
+    <link rel="stylesheet" href="css/portal.css">
+    <link type="image/ico" rel="shortcut icon" href="favicon.ico" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/semantic.min.js"></script>
+    <script type="text/javascript" src="js/vue.min.js"></script>
+    <script type="text/javascript" src="js/echarts.js"></script>
+    <script type="text/javascript" src="js/moment.js"></script>
+    <style type="text/css">
+    .box {
+        display: inline-block;
+        padding-left: 10px;
+    }
+    
+    .wrap {
+        padding: 30px 0 0 0;
+        font-size: 1.5rem;
+    }
+    
+    .wrap em {
+        font-style: normal;
+        font-size: 35px;
+    }
+    </style>
+</head>
+
+<body style="min-width: 1000px">
+    <div id="table">
+        <div class="loading" style="display:block;">
+            <canvas id="loading"></canvas>
+        </div>
+        <!-- alive -->
+        <div style="clear: both;">
+        <div id="seen" style="width: 54.7%;height:300px;">
+            数据加载中....
+        </div>
+        <!-- bricked fault ghost -->
+        <div id="version">
+            <div class="ui statistic">
+                <div class="wrap">
+                    <div class="label box">
+                        <a href="http://soma.ihangmei.com/soma/web/faults/#/bricked" target="blank"><em>Bricked</em></a>
+                    </div>
+                    <div class="value box" v-model="bricked">
+                        <em>{{bricked}}</em><a href="./bricked.html" target="blank"><i class="share square icon"></i></a>
+                    </div>
+                    <div style="padding-left: 10px;overflow:hidden;white-space:nowrap;" class="value">
+                        <small>Instruction:&nbsp;&nbsp;List of all bricked devices (seen but not reporting by DMA).</small>
+                    </div>
+                </div>
+                <div class=" wrap">
+                    <div class="label box"> 
+                        <a href="http://soma.ihangmei.com/soma/web/faults/#/fault" target="blank"><em>Fault</em></a>
+                    </div>
+                    <div class="value box" v-model="fault">
+                        <em>{{fault}}</em><a href="./fault.html" target="blank"><i class="share square icon"></i></a>
+                    </div>
+                    <div style="padding-left: 10px;" class="value">
+                        <small>Instruction:&nbsp;&nbsp;List of all devices reported as failed by the ops script,but only reporting devices disk failing.</small>
+                    </div>
+                </div>
+                <div class=" wrap">
+                    <div class="label box">
+                        <a href="http://soma.ihangmei.com/soma/web/faults/#/ghost" target="blank"><em>Ghost</em></a>
+                    </div>
+                    <div class="value box" v-model="ghost">
+                        <em>{{ghost}}</em><a href="./ghost.html" target="blank"><i class="share square icon"></i></a>
+                    </div>
+                    <div style="padding-left: 10px;overflow:hidden;white-space:nowrap;" class="value">
+                        <small>Instruction:&nbsp;&nbsp;List of all devices not rebooted for more than 7 days.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- portal and other -->
+        <section>
+            <table style="min-width:2600px;" class="ui selectable red striped table celled">
+                <thead>
+                    <tr class="center aligned">
+                        <th style="border-bottom: 1px solid #1E90FF;" rowspan="2">
+                            Bureau
+                        </th>
+                        <th style="border-bottom: 1px solid #1E90FF;" rowspan="2">
+                            Installed
+                        </th>
+                        <th style="border-bottom: 1px solid #1E90FF;" rowspan="2">
+                            Done
+                        </th>
+                        <th style="border-bottom: 1px solid #1E90FF;" rowspan="2">
+                            On-going
+                        </th>
+                        <th style="border-bottom: 1px solid #1E90FF;" rowspan="2">
+                            Not start
+                        </th>
+                        <th v-bind:colspan="title.length + 1">
+                            Portal
+                        </th>
+                        <th colspan="3">
+                            Tiger
+                        </th>
+                        <th colspan="3">
+                            Heartbeat
+                        </th>
+                        <th v-bind:colspan="mqttproxy.length + 1">
+                            Mqttproxy
+                        </th>
+                        <th v-bind:colspan="hbjar.length + 1">
+                            Hbjar
+                        </th>
+                        <th v-bind:colspan="monitor.length + 1">
+                            Monitor
+                        </th>
+                        <th v-bind:colspan="cmdhandler.length + 1">
+                            Cmdhandler
+                        </th>
+                        <th v-bind:colspan="tiger.length + 1">
+                            Tiger
+                        </th>
+                        <th v-for="data in mmaTitle" style="border-bottom: 1px solid #1E90FF;" rowspan="2">
+                            {{data}}
+                        </th>
+                    </tr>
+                    <tr class="center aligned celled portal">
+                        <th v-for="data in title">
+                            {{ data }}
+                        </th>
+                        <th>
+                            other
+                        </th>
+                        <th v-for="data in T_title">
+                            {{ data }}
+                        </th>
+                        <th>
+                            other
+                        </th>
+                        <th v-for="data in H_title">
+                            {{ data }}
+                        </th>
+                        <th>
+                            other
+                        </th>
+                        <th v-for="data in monitor" v-show="data.length < 10" v-bind:title="data" v-bind:alt="data">
+                            {{ data }}
+                        </th>
+                        <th v-for="data in mqttproxy" v-show="data.length > 10" v-bind:title="data" v-bind:alt="data">
+                            ········
+                        </th>
+                        <th>
+                            other
+                        </th>
+                        <th v-for="data in hbjar">
+                            {{ data }}
+                        </th>
+                        <th>
+                            other
+                        </th>
+                        <th v-for="data in monitor" v-show="data.length < 10" v-bind:title="data" v-bind:alt="data">
+                            {{ data }}
+                        </th>
+                        <th v-for="data in monitor" v-show="data.length > 10" v-bind:title="data" v-bind:alt="data">
+                            ········
+                        </th>
+                        <th>
+                            other
+                        </th>
+                        <th v-for="data in cmdhandler" v-show="data.length < 10" v-bind:title="data" v-bind:alt="data">
+                            {{ data }}
+                        </th>
+                        <th v-for="data in cmdhandler" v-show="data.length > 10" v-bind:title="data" v-bind:alt="data">
+                            ········
+                        </th>
+                        <th>
+                            other
+                        </th>
+                        <th v-for="data in tiger" v-show="data.length < 10" v-bind:title="data" v-bind:alt="data">
+                            {{ data }}
+                        </th>
+                        <th v-for="data in tiger" v-show="data.length > 10" v-bind:title="data" v-bind:alt="data">
+                            ········
+                        </th>
+                        <th>
+                            other
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="center aligned" v-for="site in status">
+                        <td>{{ site.name }}</td>
+                        <td>{{ site.total }}</td>
+                        <td>{{ site.done }}</td>
+                        <td>{{ site.going }}
+                            <span v-show="site.pGShow" class="listP">
+                                P
+                            </span>
+                            <span v-show="site.tGShow" class="listD">
+                                D
+                            </span>
+                            <span v-show="site.hGShow" class="listH">
+                                H
+                            </span>
+                        </td>
+                        <td>{{ site.waiting }}
+                            <span v-show="site.pWShow" class="listP">
+                                P
+                            </span>
+                            <span v-show="site.tWShow" class="listD">
+                                D
+                            </span>
+                            <span v-show="site.hWShow" class="listH">
+                                H
+                            </span>
+                        </td>
+                        <td v-show="num>=1">{{ site.version1 }}</td>
+                        <td v-show="num>=2">{{ site.version2 }}</td>
+                        <td v-show="num>=3">{{ site.version3 }}</td>
+                        <td v-show="num>=4">{{ site.version4 }}</td>
+                        <td>{{ site.other }}</td>
+                        <td class="border_left">{{ site.tiger1 }}</td>
+                        <td>{{ site.tiger2 }}</td>
+                        <td>{{ site.tiger_other }}</td>
+                        <td class="border_left">{{ site.heartbeat[0] }}</td>
+                        <td>{{ site.heartbeat[1] }}</td>
+                        <td>{{ site.heartbeat[2] }}</td>
+
+                        <td v-show="mqttproxy.length>=1" class="border_left">{{ site._mqtt1 }}</td>
+                        <td v-show="mqttproxy.length>=2">{{ site._mqtt2 }}</td>
+                        <td>{{ site.status_other1 }}</td>
+                        <td v-show="hbjar.length>=1" class="border_left">{{ site._hbjar1 }}</td>
+                        <td v-show="hbjar.length>=2">{{ site._hbjar2 }}</td>
+                        <td>{{ site.status_other2 }}</td>
+                        <td v-show="monitor.length>=1" class="border_left">{{ site._mon1 }}</td>
+                        <td v-show="monitor.length>=2">{{ site._mon2 }}</td>
+                        <td>{{ site.status_other3 }}</td>
+                        <td v-show="cmdhandler.length>=1" class="border_left">{{ site._cmd1 }}</td>
+                        <td v-show="cmdhandler.length>=2">{{ site._cmd2 }}</td>
+                        <td>{{ site.status_other4 }}</td>
+                        <td v-show="tiger.length>=1" class="border_left">{{ site._tiger1 }}</td>
+                        <td v-show="tiger.length>=2">{{ site._tiger2 }}</td>
+                        <td>{{ site.status_other5 }}</td>
+
+                        <td v-on:click="modalShow(site.name,0)" class="border_left">alive:{{site.mqtt[0]}}&nbsp;lost:{{site.mqtt[1]}} <br />cpuHigh:{{site.mqtt[2]}}<br />memHigh:{{site.mqtt[3]}}</td>
+                        <td v-on:click="modalShow(site.name,0)" class="border_left">alive:{{site.hbjar[0]}}&nbsp;lost:{{site.hbjar[1]}}<br />cpuHigh:{{site.hbjar[2]}}<br />memHigh:{{site.hbjar[3]}}</td>
+                        <td v-on:click="modalShow(site.name,0)" class="border_left">alive:{{site.mon[0]}}&nbsp;lost:{{site.mon[1]}}<br />cpuHigh:{{site.mon[2]}}<br />memHigh:{{site.mon[3]}}</td>
+                        <td v-on:click="modalShow(site.name,0)" class="border_left">alive:{{site.cmd[0]}}&nbsp;lost:{{site.cmd[1]}}<br />cpuHigh:{{site.cmd[2]}}<br />memHigh:{{site.cmd[3]}}</td>
+                        <td v-on:click="modalShow(site.name,0)" class="border_left">alive:{{site.tiger[0]}}&nbsp;lost:{{site.tiger[1]}}<br />cpuHigh:{{site.tiger[2]}}<br />memHigh:{{site.tiger[3]}}</td>
+                        <td v-on:click="modalShow(site.name,0)" class="border_left">alive:{{site.daemon[0]}}&nbsp;lost:{{site.daemon[1]}}<br />cpuHigh:{{site.daemon[2]}}<br />memHigh:{{site.daemon[3]}}</td>
+                    </tr>
+                    <tr class="center aligned">
+                        <td>总数</td>
+                        <td>{{ counts.total }}</td>
+                        <td>{{ counts.down }}</td>
+                        <td>{{ counts.pro }}</td>
+                        <td>{{ counts.not }}</td>
+                        <td v-show="num>=1"> {{ counts.version1 }} </td>
+                        <td v-show="num>=2"> {{ counts.version2 }} </td>
+                        <td v-show="num>=3"> {{ counts.version3 }} </td>
+                        <td v-show="num>=4"> {{ counts.version4 }} </td>
+                        <td> {{ counts.other }} </td>
+                        <td class="border_left"> {{ counts.tiger1 }} </td>
+                        <td> {{ counts.tiger2 }} </td>
+                        <td>{{ counts.tiger_other }}</td>
+                        <td class="border_left"> {{ counts.heart1 }} </td>
+                        <td> {{ counts.heart2 }} </td>
+                        <td> {{ counts.heart3 }} </td>
+                        <td class="border_left">-</td>
+                        <td>-</td>
+                        <td v-show="mqttproxy.length == 2">-</td>
+                        <td class="border_left">-</td>
+                        <td>-</td>
+                        <td v-show="hbjar.length == 2">-</td>
+                        <td class="border_left">-</td>
+                        <td>-</td>
+                        <td v-show="monitor.length == 2">-</td>
+                        <td class="border_left">-</td>
+                        <td>-</td>
+                        <td v-show="cmdhandler.length == 2">-</td>
+                        <td class="border_left">-</td>
+                        <td>-</td>
+                        <td v-show="tiger.length == 2">-</td>
+                        <td class="border_left">-</td>
+                        <td class="border_left">-</td>
+                        <td class="border_left">-</td>
+                        <td class="border_left">-</td>
+                        <td class="border_left">-</td> <!--   -->
+                        <td class="border_left">-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <!-- 弹窗 -->
+        <div class="ui modal">
+            <div class="header">
+            </div>
+            <div class="ui secondary pointing menu" id="tab">
+                <a class="item" v-on:click="modalShow('aaaa',0)">
+                    主页
+                </a>
+                <a class="item" v-on:click="modalShow('dddd',1)">
+                    信息
+                </a>
+                <a class="item" v-on:click="modalShow('aassssssa',2)">
+                    朋友
+                </a>
+            </div>
+            <div style="min-height:300px;" class="ui segment">
+                <div id="load" class="ui active dimmer">
+                    <div class="ui loader"></div>
+                </div>
+                <table class="ui selectable blue striped table celled center aligned">
+                    <thead class="">
+                        <tr>
+                            <th>标题</th>
+                            <th>标题</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>空间</td>
+                            <td>空间</td>
+                        </tr>
+                        <tr>
+                            <td>空间</td>
+                            <td>空间</td>
+                        </tr>
+                        <tr>
+                            <td>空间</td>
+                            <td>空间</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="2">
+                                <div class="ui right floated pagination menu">
+                                    <a class="icon item" v-show="current != 1" @click="current && goto(--current)">
+                                        <i class="left chevron icon"></i>
+                                    </a>
+                                    <a class="icon item disabled" v-show="current == 1">
+                                        <i class="left chevron icon"></i>
+                                    </a>
+                                    <a v-for="index in pages" @click="goto(index)" :class="{'active':current == index,'item':true}">{{index}}</a>
+                                    <a class="icon item disabled" v-show="allpage == current">
+                                        <i class="right chevron icon"></i>
+                                    </a>
+                                    <a class="icon item" v-show="allpage != current && allpage != 0 " @click="current && goto(++current)">
+                                        <i class="right chevron icon"></i>
+                                    </a>
+                                </div>
+                            </th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="actions">
+                <div class="ui black deny button">
+                    <i style="margin: 0;" class="remove icon"></i>
+                </div>
+                <div class="ui positive deny button">
+                    <i style="margin: 0;" class="checkmark icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/portal.js"></script>
+    <script type="text/javascript" src="js/loading.js"></script>
+    <script type="text/javascript" src="js/seenbar.js"></script>
+</body>
+
+</html>

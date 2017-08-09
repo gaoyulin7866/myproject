@@ -1,0 +1,51 @@
+table>thead:nth-child(1) tr {
+	background-color: #bebebe;
+}
+.table-striped>tbody>tr:nth-of-type(odd) {
+	background-color: #bbffff;
+}
+.title {
+	font-size: 18px;
+	font-weight: bold;
+	background-color: #ffcbb3;
+}
+.status {
+	padding: 5px 10px;
+	border-radius: 5px;
+	color:#fff;
+}
+.actives {
+	padding: 5px 10px;
+	border-radius: 5px;
+	color:#fff;
+	background-color: #1ab940;
+}
+.stop {
+	padding: 5px 10px;
+	border-radius: 5px;
+	color:#fff;
+	background-color: #d91b1b;
+}
+.note {
+	padding: 5px 10px;
+	border-radius: 5px;
+	color:#fff;
+	background-color: #6b6b6b;
+}
+.handled {
+	padding: 5px 10px;
+	border-radius: 5px;
+	color:#fff;
+	background-color: #00b5ad;
+}
+.seen {
+	padding: 5px 10px;
+	border-radius: 5px;
+	border: 1px solid #2185d0;
+	color:#2185d0;
+}
+
+.gohst_btn {
+	padding: 0;
+	font-size: 1.5em;
+}
