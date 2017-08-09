@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-table.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/vue.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-table.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-table-zh-CN.js"></script>
+    <script src="js/Blob.js"></script>
+    <script src="js/FileSaver.min.js"></script>
+    <script src="js/ExportUtil.js"></script>
+    <!--工具类-->
+    <script src="js/moment.js"></script>
+</head>
+<body>
+    <div id="table" class="container-fluid">
+        <div class="col-md-12">
+            <table id="table2">
+
+                <thead>
+                    <tr>
+                        <th  data-field="LastReport">Last Report</th>
+                        <th>Last Seen</th>
+                        <th>Device</th>
+                        <th>Train</th>
+                        <th>SIM Status</th>
+                        <th>Handled By</th>
+                        <th >Seen By</th>
+                    </tr>
+                </thead>
+
+                <tr><td class="title">umount-disk<button onclick="outExcel('umount')" class="btn pull-right">导出数据</button></td></tr>
+                
+                <tr v-for="data in umount">
+                    <td>
+                        <span v-if="data.LastReportDmc!=''">DMC:{{ data.LastReportDmc }}</span><br />
+                        <span v-if="data.LastReportNoc!=''">NOC:{{ data.LastReportNoc }}</span>
+                    </td>
+                    <td><span>{{ data.LastSeen }}</span></td>
+                    <td><span>{{ data.Device }}</span></td>
+                    <td><span>{{ data.Train }}</span></td>
+                    <td>
+                        <span v-for="list in data.SimInfo">
+                            <span>{{ list.operatorType }}:</span>
+                            <span v-bind:class="{'actives': list.status === '已激活' || list.status === '在用' || list.status === '正使用','stop': list.status === '已停用','note': list.status === '未知'}">{{ list.status }}</span>
+                        </span>
+                    </td>
+                    <td><span v-bind:class="{'handled': data.HandledBy != ''}">{{ data.HandledBy }}</span></td>
+                    <td>
+                        <span>{{ data.hotspots.WF }}</span>
+                        <span v-bind:class="{'seen': data.hotspots.RD != ''}">{{ data.hotspots.RD }}</span>
+                    </td>
+                </tr>
+                <tr><td  class="title">readonly-disk<button onclick="outExcel('readonly')" class="btn pull-right">导出数据</button></td></tr>
+                <tr v-for="read in readyonly">
+                    <td>
+                        <span v-if="read.LastReportDmc!=''">DMC:{{ read.LastReportDmc }}</span><br />
+                        <span v-if="read.LastReportNoc!=''">NOC:{{ read.LastReportNoc }}</span>
+                    </td>
+                    <td><span>{{ read.LastSeen }}</span></td>
+                    <td><span>{{ read.Device }}</span></td>
+                    <td><span>{{ read.Train }}</span></td>
+                    <td>
+                        <span v-for="list in read.SimInfo">
+                            <span>{{ list.operatorType }}:</span>
+                            <span v-bind:class="{'actives': list.status === '已激活' || list.status === '在用' || list.status === '正使用','stop': list.status === '已停用','note': list.status === '未知'}">{{ list.status }}</span>
+                        </span>
+                    </td>
+                    <td><span v-bind:class="{'handled': read.HandledBy != ''}">{{ read.HandledBy }}</span></td>
+                    <td>
+                        <span>{{ read.hotspots.WF }}</span>
+                        <span v-bind:class="{'seen': read.hotspots.RD != ''}">{{ read.hotspots.RD }}</span>
+                    </td>
+                </tr>
+                <tr><td  class="title">heartbeat-failed<button onclick="outExcel('heartbeat')" class="btn pull-right">导出数据</button></td></tr>
+                <tr v-for="heart in heartbeat">
+                    <td>
+                        <span v-if="heart.LastReportDmc!=''">DMC:{{ heart.LastReportDmc }}</span><br />
+                        <span v-if="heart.LastReportNoc!=''">NOC:{{ heart.LastReportNoc }}</span>
+                    </td>
+                    <td><span>{{ heart.LastSeen }}</span></td>
+                    <td><span>{{ heart.Device }}</span></td>
+                    <td><span>{{ heart.Train }}</span></td>
+                    <td>
+                        <span v-for="list in heart.SimInfo">
+                            <span>{{ list.operatorType }}:</span>
+                            <span v-bind:class="{'actives': list.status === '已激活' || list.status === '在用' || list.status === '正使用','stop': list.status === '已停用','note': list.status === '未知'}">{{ list.status }}</span>
+                        </span>
+                    </td>
+                    <td><span v-bind:class="{'handled': heart.HandledBy != ''}">{{ heart.HandledBy }}</span></td>
+                    <td>
+                        <span>{{ heart.hotspots.WF }}</span>
+                        <span v-bind:class="{'seen': heart.hotspots.RD != ''}" >{{ heart.hotspots.RD }}</span>
+                    </td>
+                </tr>
+                <tr><td  class="title">no-nginx<button onclick="outExcel('nginx')" class="btn pull-right">导出数据</button></td></tr>
+                <tr v-for="site in nginx">
+                    <td>
+                        <span v-if="site.LastReportDmc!=''">DMC:{{ site.LastReportDmc }}</span><br />
+                        <span v-if="site.LastReportNoc!=''">NOC:{{ site.LastReportNoc }}</span>
+                    </td>
+                    <td><span>{{ site.LastSeen }}</span></td>
+                    <td><span>{{ site.Device }}</span></td>
+                    <td><span>{{ site.Train }}</span></td>
+                    <td>
+                        <span v-for="list in site.SimInfo">
+                            <span>{{ list.operatorType }}:</span>
+                            <span v-bind:class="{'actives': list.status === '已激活' || list.status === '在用' || list.status === '正使用','stop': list.status === '已停用','note': list.status === '未知'}">{{ list.status }}</span>
+                        </span>
+                    </td>
+                    <td><span v-bind:class="{'handled': site.HandledBy != ''}">{{ site.HandledBy }}</span></td>
+                    <td>
+                        <span>{{ site.hotspots.WF }}</span>
+                        <span v-bind:class="{'seen': site.hotspots.RD != ''}" >{{ site.hotspots.RD }}</span>
+                    </td>
+                </tr>
+                <tr><td  class="title">readonly-root<button onclick="outExcel('root')" class="btn pull-right">导出数据</button></td></tr>
+                <tr v-for="note in root">
+                    <td>
+                        <span v-if="note.LastReportDmc!=''">DMC:{{ note.LastReportDmc }}</span><br />
+                        <span v-if="note.LastReportNoc!=''">NOC:{{ note.LastReportNoc }}</span>
+                    </td>
+                    <td><span>{{ note.LastSeen }}</span></td>
+                    <td><span>{{ note.Device }}</span></td>
+                    <td><span>{{ note.Train }}</span></td>
+                    <td>
+                        <span v-for="list in note.SimInfo">
+                            <span>{{ list.operatorType }}:</span>
+                            <span v-bind:class="{'actives': list.status === '已激活' || list.status === '在用' || list.status === '正使用','stop': list.status === '已停用','note': list.status === '未知'}">{{ list.status }}</span>
+                        </span>
+                    </td>
+                    <td><span v-bind:class="{'handled': note.HandledBy != ''}">{{ note.HandledBy }}</span></td>
+                    <td>
+                        <span>{{ note.hotspots.WF }}</span>
+                        <span v-bind:class="{'seen': note.hotspots.RD != ''}" >{{ note.hotspots.RD }}</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="js/fault.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+version: "3"
+services:
+  web:
+    image: "${WEB_IMAGE}"
+    ports:
+      - "${WEB_PORTS_01}"
+    networks:
+      - swarm_network
+    deploy:
+      placement:
+        constraints:
+          - node.role == worker
+      restart_policy:
+        condition: on-failure
+      replicas: 1
+
+networks:
+  swarm_network:
+    external:
+      name: swarm-operation-dashboard

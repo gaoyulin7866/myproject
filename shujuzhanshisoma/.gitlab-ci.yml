@@ -1,0 +1,37 @@
+variables:
+  DOCKER_DRIVER: overlay
+  TEST_REGISTRY: reg.test.ihangmei.com
+  PROD_REGISTRY: reg.devops.ihangmei.com
+  NAMESPACE: iot
+  TEST_IMAGE: $TEST_REGISTRY/$NAMESPACE/$CI_PROJECT_NAME:1.0.0
+  RELEASE_IMAGE: $PROD_REGISTRY/$NAMESPACE/$CI_PROJECT_NAME:1.0.0
+
+stages:
+  - build
+  - test
+  - deploy
+
+build-production-project:
+  stage: build
+  tags:
+    - git-runner-go
+  script:
+    - docker build --pull -t $RELEASE_IMAGE .
+    - docker push $RELEASE_IMAGE
+  only:
+    - production
+
+deploy-production-project:
+  stage: deploy
+  tags:
+    - git-runner-go
+  script:
+    - export WEB_IMAGE=$RELEASE_IMAGE
+    - export WEB_PORTS_01=8087:80
+    - eval $(docker-machine env devops-docker1)
+    - docker stack deploy -c docker-compose.yml --with-registry-auth=true operation-dashboard
+  environment:
+    name: production
+    url: http://prod.devops.ihangmei.com/op-dashboard/soma.html
+  only:
+    - production

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>SOMA</title>
+    <link rel="stylesheet" type="text/css" href="css/css.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link type="image/ico" rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/echarts.js"></script>
+    <script type="text/javascript" src="js/bootstrap-table.min.js"></script>
+    <script type="text/javascript" src="js/vue.min.js"></script>
+    <script type="text/javascript" src="js/scroll.js"></script>
+    <script type="text/javascript" src="js/bootstrap-table-zh-CN.js"></script>
+</head>
+<body class="wrapper">
+<div class="wrapper_seen">
+    <div id="seen" style="width: 49.5%;height:300px;">数据加载中....</div>
+    <div id="version" style="width: 49.5%;height:300px;">数据加载中....</div>
+</div>
+    
+<div class="clearfix box">
+    <div class="bricked" style="width: 33%">
+        <div id="brickedgauge" style="width: 100%;height:300px;border-radius: 10px;">数据加载中....</div>
+        <div id="brickedbar" style="width: 100%;height:200px;">数据加载中....</div>
+        <div id="brickedbar_tiger" style="width: 100%;height:100px;">数据加载中....</div>
+    </div>
+    <div class="bricked" style="width: 33%;">
+        <div id="faultgauge" style="width: 100%;height:300px;border-radius: 10px;">数据加载中....</div>
+        <div id="faultbar" style="width: 100%;height:200px;">数据加载中....</div>
+        <div id="faultbar_tiger" style="width: 100%;height:100px;">数据加载中....</div>
+    </div>
+    <div class="bricked wrap" style="margin-right: 0;width: 32%">
+        <div id="ghostgauge" style="width: 100%;height:300px;border-radius: 10px;">数据加载中....</div>
+        <div class="myscroll">
+            <div class="ghostTitle">List of all devices not rebooted for more than 7 days</div>
+            <ul id="app">
+                <li v-for=" list in ghostName " onload="load()">
+                    <a v-bind:href="'https://soma.ihangmei.com/soma/web/faults/#/device/' + list.name" class="col-md-6" target="_blank">{{ list.name }}</a>
+                    <a class="col-md-6">{{ list.time }}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+    <script type="text/javascript" src="js/seenbar.js"></script>
+    <script type="text/javascript" src="js/pie.js"></script>
+</body>
+</html>
